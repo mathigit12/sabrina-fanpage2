@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabrina Carpenter Fan Page</title>
+<link rel="icon" type="image/x-icon" href="image">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Background large text -->
+<div class="bg-text">Sabrina Carpenter</div>
+
+<!-- Neon heading -->
+<h1>Sabrina Carpenter</h1>
+
+<!-- Floating social links -->
+<div class="social-left">
+  <a href="https://www.instagram.com/sabrinacarpenter/" target="_blank">
+    <img src="insta2.jpg" alt="Instagram" height="40">Instagram
+  </a>
+</div>
+<div class="social-right">
+  <a href="https://www.youtube.com/@sabrinacarpenter/" target="_blank">
+    <img src="youtube.png" alt="YouTube" height="40">YouTube
+  </a>
+</div>
+
+<!-- Search box -->
+<div class="search-container">
+  <form onsubmit="go(event)">
+    <input list="hints" id="search" name="q" type="text" placeholder="Search songs...">
+    <datalist id="hints">
+      <option value="Expresso">
+      <option value="ManChild">
+      <option value="Please">
+      <option value="Taste">
+      <option value="Tears">
+    </datalist>
+    <button type="submit">🔍</button>
+  </form>
+</div>
+
+<script>
+const links = {
+  "Expresso": "https://youtu.be/eVli-tstM5E?si=TR3xJMp_TUkvZNNJ",
+  "ManChild": "https://youtu.be/aSugSGCC12I?si=LGPipkNwQuz8af6l",
+  "Please": "https://youtu.be/cF1Na4AIecM?si=0wLgXah5XuQpJznh",
+  "Taste": "https://youtu.be/KEG7b851Ric?si=kuc4sTmdyoLRynia",
+  "Tears": "https://youtu.be/V9vuCByb6js?si=3OY50QJXVs39jkTE"
+};
+
+function go(event) {
+  event.preventDefault();
+  const input = document.getElementById("search").value;
+  if (links[input]) {
+    window.open(links[input], "_blank");
+  } else {
+    alert("No link found for: " + input);
+  }
+}
+</script>
+
+</body>
+</html>
